@@ -1,0 +1,22 @@
+const labels = {{ label }};
+
+const data = {
+  labels: labels,
+  datasets: [
+    {
+      label: "My First dataset",
+      backgroundColor: "rgb(255, 99, 132)",
+      borderColor: "rgb(255, 99, 132)",
+      data: {{ data }},
+    },
+  ],
+};
+
+const config = {
+  type: "line",
+  data: data,
+  options: {},
+};
+
+var ctx = document.getElementById('barChart').getContext('2d');
+const barChart = new Chart(ctx, config);
